@@ -112,8 +112,9 @@
         /* Notificação Popup */
         #notification-popup {
             position: fixed;
-            top: 20px; /* Alterado de bottom para top */
-            right: -300px; /* Começa fora da tela */
+            top: 20px;
+            right: 20px; /* Posição final */
+            max-width: calc(100vw - 40px); /* Garante que não ultrapasse a tela */
             background-color: rgba(20, 20, 20, 0.9);
             color: white;
             padding: 12px 18px;
@@ -122,13 +123,14 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             font-size: 14px;
             z-index: 1000;
-            transition: right 0.5s ease-in-out;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            transform: translateX(calc(100% + 40px)); /* Começa fora da tela à direita */
             opacity: 0;
             visibility: hidden;
         }
 
         #notification-popup.show {
-            right: 20px;
+            transform: translateX(0); /* Move para a posição final */
             opacity: 1;
             visibility: visible;
         }
@@ -406,7 +408,7 @@
         <!-- Seção de Segurança -->
         
         <!-- Selos de Segurança -->
-        <div class="mt-8 flex justify-center items-center gap-4">
+        <div class="mt-8 flex flex-wrap justify-center items-center gap-4">
             <img src="https://www.siteconfiavel.com.br/assets/img/logo.svg" alt="Selo Site Confiável" class="h-10">
             <img src="https://res.cloudinary.com/beleza-na-web/image/upload/f_auto,fl_progressive,q_auto:eco,w_iw/v1/banner/2025_05_06_10_15_51_5/5de7d0ba-aa98-48b8-84f1-388f0e901606-security-blz.png" alt="Selo de Segurança Beleza na Web" class="h-10">
         </div>
@@ -455,4 +457,6 @@
 
 </body>
 </html>
+
+
 
