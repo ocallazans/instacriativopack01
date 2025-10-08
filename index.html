@@ -74,7 +74,7 @@
             box-shadow: 0 0 20px rgba(236, 72, 153, 0.8);
         }
 
-        /* Animação do Carrossel */
+        /* Animação do Carrossel de Imagens */
         .carousel-item {
             width: 200px;
             height: auto;
@@ -93,13 +93,13 @@
             mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
         }
         .carousel-track {
-            animation: scroll 40s linear infinite;
+            animation: scroll-horizontal 40s linear infinite;
         }
         .carousel-track:hover {
             animation-play-state: paused;
         }
         
-        @keyframes scroll {
+        @keyframes scroll-horizontal {
             from {
                 transform: translateX(0);
             }
@@ -199,6 +199,23 @@
 
         .telegram-blue {
             color: #2AABEE;
+        }
+
+        /* Animação do Mural de Depoimentos */
+        .testimonial-column {
+            animation: scroll-vertical 40s linear infinite;
+        }
+        .testimonial-column:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-vertical {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-50%);
+            }
         }
         
     </style>
@@ -390,6 +407,97 @@
                     <div class="w-20 h-20 bg-pink-500 rounded-full flex items-center justify-center text-4xl font-black mb-4 neon-button">3</div>
                     <h3 class="text-xl font-bold mb-2">Aproveite seu pack</h3>
                      <p class="text-sm text-gray-400">Use à vontade e receba atualizações.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section class="mb-16 md:mb-24">
+            <h2 class="text-3xl font-bold uppercase neon-text mb-12">O que nossas clientes dizem</h2>
+            <div class="relative w-full max-w-4xl mx-auto h-[450px] overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
+                <div class="testimonial-column space-y-4">
+                    <!-- Depoimentos Originais -->
+                    <div class="bg-gray-900/50 p-4 rounded-lg neon-box text-left flex items-start gap-4">
+                        <img src="https://placehold.co/48x48/E1306C/white?text=AC" alt="Foto de Ana Clara" class="w-12 h-12 rounded-full border-2 border-pink-400 flex-shrink-0">
+                        <div>
+                            <h4 class="font-bold text-pink-400">Ana Clara</h4>
+                            <div class="text-yellow-400 text-xs my-1">★★★★★</div>
+                            <p class="text-gray-300 italic text-sm">"Incrível! O pack transformou meus stories. São tantas opções que fica fácil criar conteúdo todos os dias. Valeu cada centavo!"</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900/50 p-4 rounded-lg neon-box text-left flex items-start gap-4">
+                        <img src="https://placehold.co/48x48/833AB4/white?text=BS" alt="Foto de Beatriz Santos" class="w-12 h-12 rounded-full border-2 border-pink-400 flex-shrink-0">
+                        <div>
+                            <h4 class="font-bold text-pink-400">Beatriz Santos</h4>
+                            <div class="text-yellow-400 text-xs my-1">★★★★★</div>
+                            <p class="text-gray-300 italic text-sm">"Estava sem ideias e esse pack foi a solução. Super organizado no Telegram e as figurinhas são de altíssima qualidade. Recomendo demais!"</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900/50 p-4 rounded-lg neon-box text-left flex items-start gap-4">
+                        <img src="https://placehold.co/48x48/405DE6/white?text=CO" alt="Foto de Camila Oliveira" class="w-12 h-12 rounded-full border-2 border-pink-400 flex-shrink-0">
+                        <div>
+                            <h4 class="font-bold text-pink-400">Camila Oliveira</h4>
+                            <div class="text-yellow-400 text-xs my-1">★★★★★</div>
+                            <p class="text-gray-300 italic text-sm">"A melhor compra que fiz para o meu Instagram. Por apenas R$10, o acesso vitalício é surreal. As figurinhas são lindas e super fáceis de usar."</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900/50 p-4 rounded-lg neon-box text-left flex items-start gap-4">
+                        <img src="https://placehold.co/48x48/F77737/white?text=DL" alt="Foto de Daniela Lima" class="w-12 h-12 rounded-full border-2 border-pink-400 flex-shrink-0">
+                        <div>
+                            <h4 class="font-bold text-pink-400">Daniela Lima</h4>
+                            <div class="text-yellow-400 text-xs my-1">★★★★★</div>
+                            <p class="text-gray-300 italic text-sm">"Se você quer profissionalizar seu perfil, comece por aqui. A variedade de nichos é gigante e a qualidade é impecável. Amei!"</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900/50 p-4 rounded-lg neon-box text-left flex items-start gap-4">
+                        <img src="https://placehold.co/48x48/E1306C/white?text=EC" alt="Foto de Eduarda Costa" class="w-12 h-12 rounded-full border-2 border-pink-400 flex-shrink-0">
+                        <div>
+                            <h4 class="font-bold text-pink-400">Eduarda Costa</h4>
+                            <div class="text-yellow-400 text-xs my-1">★★★★★</div>
+                            <p class="text-gray-300 italic text-sm">"Superou todas as minhas expectativas! As figurinhas são criativas e dão um toque especial em qualquer story. Já indiquei para todas as minhas amigas."</p>
+                        </div>
+                    </div>
+                    <!-- Depoimentos Duplicados para o Loop -->
+                    <div class="bg-gray-900/50 p-4 rounded-lg neon-box text-left flex items-start gap-4">
+                        <img src="https://placehold.co/48x48/E1306C/white?text=AC" alt="Foto de Ana Clara" class="w-12 h-12 rounded-full border-2 border-pink-400 flex-shrink-0">
+                        <div>
+                            <h4 class="font-bold text-pink-400">Ana Clara</h4>
+                            <div class="text-yellow-400 text-xs my-1">★★★★★</div>
+                            <p class="text-gray-300 italic text-sm">"Incrível! O pack transformou meus stories. São tantas opções que fica fácil criar conteúdo todos os dias. Valeu cada centavo!"</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900/50 p-4 rounded-lg neon-box text-left flex items-start gap-4">
+                        <img src="https://placehold.co/48x48/833AB4/white?text=BS" alt="Foto de Beatriz Santos" class="w-12 h-12 rounded-full border-2 border-pink-400 flex-shrink-0">
+                        <div>
+                            <h4 class="font-bold text-pink-400">Beatriz Santos</h4>
+                            <div class="text-yellow-400 text-xs my-1">★★★★★</div>
+                            <p class="text-gray-300 italic text-sm">"Estava sem ideias e esse pack foi a solução. Super organizado no Telegram e as figurinhas são de altíssima qualidade. Recomendo demais!"</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900/50 p-4 rounded-lg neon-box text-left flex items-start gap-4">
+                        <img src="https://placehold.co/48x48/405DE6/white?text=CO" alt="Foto de Camila Oliveira" class="w-12 h-12 rounded-full border-2 border-pink-400 flex-shrink-0">
+                        <div>
+                            <h4 class="font-bold text-pink-400">Camila Oliveira</h4>
+                            <div class="text-yellow-400 text-xs my-1">★★★★★</div>
+                            <p class="text-gray-300 italic text-sm">"A melhor compra que fiz para o meu Instagram. Por apenas R$10, o acesso vitalício é surreal. As figurinhas são lindas e super fáceis de usar."</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900/50 p-4 rounded-lg neon-box text-left flex items-start gap-4">
+                        <img src="https://placehold.co/48x48/F77737/white?text=DL" alt="Foto de Daniela Lima" class="w-12 h-12 rounded-full border-2 border-pink-400 flex-shrink-0">
+                        <div>
+                            <h4 class="font-bold text-pink-400">Daniela Lima</h4>
+                            <div class="text-yellow-400 text-xs my-1">★★★★★</div>
+                            <p class="text-gray-300 italic text-sm">"Se você quer profissionalizar seu perfil, comece por aqui. A variedade de nichos é gigante e a qualidade é impecável. Amei!"</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900/50 p-4 rounded-lg neon-box text-left flex items-start gap-4">
+                        <img src="https://placehold.co/48x48/E1306C/white?text=EC" alt="Foto de Eduarda Costa" class="w-12 h-12 rounded-full border-2 border-pink-400 flex-shrink-0">
+                        <div>
+                            <h4 class="font-bold text-pink-400">Eduarda Costa</h4>
+                            <div class="text-yellow-400 text-xs my-1">★★★★★</div>
+                            <p class="text-gray-300 italic text-sm">"Superou todas as minhas expectativas! As figurinhas são criativas e dão um toque especial em qualquer story. Já indiquei para todas as minhas amigas."</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
