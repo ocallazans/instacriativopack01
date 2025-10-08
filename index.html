@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pack de Figurinhas para Instagram</title>
+    <title>Insta Criativo Pack</title>
     <!-- Favicon atualizado -->
     <link rel="icon" href="https://i.imgur.com/YZmSg0o.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -149,11 +149,11 @@
 
         .phone-mockup {
             position: absolute;
-            width: 110px; /* Largura do celular */
-            height: 220px; /* Altura do celular */
+            width: 100px; /* Largura do celular */
+            height: 200px; /* Altura do celular */
             background: #111;
-            border-radius: 20px;
-            border: 6px solid #f0f0f0;
+            border-radius: 18px;
+            border: 5px solid #f0f0f0;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             display: flex;
             justify-content: center;
@@ -164,11 +164,11 @@
         .phone-mockup::before {
             content: '';
             position: absolute;
-            top: 8px;
+            top: 6px;
             width: 40%;
-            height: 10px;
+            height: 8px;
             background: #111;
-            border-radius: 8px;
+            border-radius: 6px;
             z-index: 2;
         }
 
@@ -245,7 +245,7 @@
         <!-- Topo -->
         <header class="mb-16 md:mb-24 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
             <!-- Mockup Celulares -->
-            <div class="mockup-container w-[220px] h-[250px]">
+            <div class="mockup-container w-[200px] h-[240px]">
                 <div class="phone-mockup phone-1">
                     <div class="phone-screen">
                         <img src="https://i.imgur.com/8BpUGAA.jpeg" alt="Exemplo de figurinha no celular">
@@ -260,7 +260,7 @@
 
             <!-- Conteúdo do Topo -->
             <div class="text-center md:text-left">
-                <h1 class="text-4xl sm:text-5xl font-black uppercase neon-text mb-4">Pack de Figurinhas para Instagram</h1>
+                <h1 class="text-4xl lg:text-5xl font-black uppercase neon-text mb-4">Insta Criativo Pack</h1>
                 <p class="text-lg md:text-xl text-gray-300 mb-6">A solução completa para stories incríveis e profissionais.</p>
 
                 <div class="bg-black/30 border-2 border-pink-500 inline-block p-4 rounded-lg shadow-[0_0_15px_rgba(236,72,153,0.8)] mb-4">
@@ -277,9 +277,8 @@
                 <div id="countdown-timer" class="bg-gray-900/50 p-2 rounded-lg inline-flex items-center justify-center gap-2 text-center mt-4">
                     <p class="text-sm font-semibold text-pink-400 mr-2">A OFERTA TERMINA EM:</p>
                     <div class="flex gap-2">
-                        <div><span id="hours" class="font-bold text-lg bg-black/50 px-2 py-1 rounded">00</span><span class="text-xs block">Horas</span></div>
-                        <div><span id="minutes" class="font-bold text-lg bg-black/50 px-2 py-1 rounded">00</span><span class="text-xs block">Min</span></div>
-                        <div><span id="seconds" class="font-bold text-lg bg-black/50 px-2 py-1 rounded">00</span><span class="text-xs block">Seg</span></div>
+                        <div><span id="minutes" class="font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
+                        <div><span id="seconds" class="font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
                     </div>
                 </div>
                 <div class="mt-8">
@@ -633,25 +632,30 @@
         }, 3000);
         
         // SUGESTÃO: Script para o contador de oferta
+        const endTime = new Date().getTime() + (1 * 60 * 1000) + (59 * 1000); // 1 minuto e 59 segundos a partir de agora
+
         const countdown = () => {
-            const countDate = new Date();
-            countDate.setHours(23, 59, 59, 999); // Fim do dia
             const now = new Date().getTime();
-            const gap = countDate - now;
+            const gap = endTime - now;
 
-            const second = 1000;
-            const minute = second * 60;
-            const hour = minute * 60;
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
 
-            const textHour = Math.floor(gap / hour);
-            const textMinute = Math.floor((gap % hour) / minute);
-            const textSecond = Math.floor((gap % minute) / second);
+            if (gap < 0) {
+                clearInterval(timerInterval);
+                minutesEl.innerText = '00';
+                secondsEl.innerText = '00';
+                return;
+            }
             
-            document.getElementById('hours').innerText = textHour < 10 ? '0' + textHour : textHour;
-            document.getElementById('minutes').innerText = textMinute < 10 ? '0' + textMinute : textMinute;
-            document.getElementById('seconds').innerText = textSecond < 10 ? '0' + textSecond : textSecond;
+            const minutes = Math.floor(gap / (1000 * 60));
+            const seconds = Math.floor((gap % (1000 * 60)) / 1000);
+            
+            minutesEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+            secondsEl.innerText = seconds < 10 ? '0' + seconds : seconds;
         };
-        setInterval(countdown, 1000);
+        const timerInterval = setInterval(countdown, 1000);
+        countdown(); // Chamada inicial
 
         // SUGESTÃO: Script para o FAQ
         document.querySelectorAll('.faq-question').forEach(button => {
@@ -667,5 +671,8 @@
 
 </body>
 </html>
+
+
+
 
 
