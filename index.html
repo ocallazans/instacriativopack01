@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pack de Figurinhas para Instagram</title>
+    <!-- Favicon atualizado -->
+    <link rel="icon" href="https://i.imgur.com/YZmSg0o.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -218,6 +220,22 @@
             }
         }
         
+        /* SUGESTÃO: Estilos para o FAQ */
+        .faq-item .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Altura suficiente para a resposta */
+            transition: max-height 0.4s ease-in;
+        }
+        .faq-item .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
     </style>
 </head>
 <body class="bg-gray-900">
@@ -243,21 +261,9 @@
             <!-- Conteúdo do Topo -->
             <div class="text-center md:text-left">
                 <h1 class="text-4xl sm:text-5xl font-black uppercase neon-text mb-4">Pack de Figurinhas para Instagram</h1>
-                <div class="space-y-2 mb-6 text-lg md:text-xl font-semibold text-gray-200">
-                    <p class="flex items-center justify-center md:justify-start gap-2">
-                        <span class="text-pink-400 text-2xl">✓</span>
-                        <span>+10.000 Figurinhas Prontas</span>
-                    </p>
-                     <p class="flex items-center justify-center md:justify-start gap-2">
-                        <span class="text-pink-400 text-2xl">✓</span>
-                        <span>+ 1.000 Clientes Satisfeitos</span>
-                    </p>
-                     <p class="flex items-center justify-center md:justify-start gap-2">
-                        <span class="text-pink-400 text-2xl">✓</span>
-                        <span>+50 Nichos Diferentes</span>
-                    </p>
-                </div>
-                <div class="bg-black/30 border-2 border-pink-500 inline-block p-4 rounded-lg shadow-[0_0_15px_rgba(236,72,153,0.8)] mb-8">
+                <p class="text-lg md:text-xl text-gray-300 mb-6">A solução completa para stories incríveis e profissionais.</p>
+
+                <div class="bg-black/30 border-2 border-pink-500 inline-block p-4 rounded-lg shadow-[0_0_15px_rgba(236,72,153,0.8)] mb-4">
                     <div class="text-3xl md:text-4xl font-bold flex items-baseline justify-center gap-3">
                         <span class="text-gray-400 line-through text-2xl md:text-3xl">R$19,99</span>
                         <span class="text-pink-400">por R$9,99</span>
@@ -267,7 +273,16 @@
                         <span class="telegram-blue font-semibold">acesso vitalício no Telegram</span>
                     </p>
                 </div>
-                <div>
+                <!-- SUGESTÃO: Contador de oferta adicionado -->
+                <div id="countdown-timer" class="bg-gray-900/50 p-2 rounded-lg inline-flex items-center justify-center gap-2 text-center mt-4">
+                    <p class="text-sm font-semibold text-pink-400 mr-2">A OFERTA TERMINA EM:</p>
+                    <div class="flex gap-2">
+                        <div><span id="hours" class="font-bold text-lg bg-black/50 px-2 py-1 rounded">00</span><span class="text-xs block">Horas</span></div>
+                        <div><span id="minutes" class="font-bold text-lg bg-black/50 px-2 py-1 rounded">00</span><span class="text-xs block">Min</span></div>
+                        <div><span id="seconds" class="font-bold text-lg bg-black/50 px-2 py-1 rounded">00</span><span class="text-xs block">Seg</span></div>
+                    </div>
+                </div>
+                <div class="mt-8">
                     <a href="https://www.ggcheckout.com/checkout/v2/Z3VzGlDvIPiJP30xwlyb" class="neon-button neon-button-green inline-flex items-center justify-center text-lg md:text-xl px-8 py-4 uppercase font-bold tracking-wider">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
@@ -277,7 +292,6 @@
                 </div>
             </div>
         </header>
-
 
         <!-- Prova Social -->
         <section class="mb-16 md:mb-24">
@@ -346,6 +360,18 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
+                     <span class="text-lg">+10.000 <strong>Figurinhas Prontas</strong></span>
+                </div>
+                <div class="flex items-center bg-gray-900/50 p-4 rounded-lg neon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                     <span class="text-lg">+50 <strong>Nichos Diferentes</strong></span>
+                </div>
+                 <div class="flex items-center bg-gray-900/50 p-4 rounded-lg neon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                      <span class="text-lg">Acesso <strong>vitalício</strong> por apenas R$9,99</span>
                 </div>
                  <div class="flex items-center bg-gray-900/50 p-4 rounded-lg neon-box">
@@ -353,6 +379,12 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span class="text-lg">Organização <strong>prática</strong> e fácil de usar no Telegram</span>
+                </div>
+                <div class="flex items-center bg-gray-900/50 p-4 rounded-lg neon-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-lg">+ 1.000 <strong>Clientes Satisfeitos</strong></span>
                 </div>
             </div>
             <div class="mt-12">
@@ -493,6 +525,53 @@
             </div>
         </section>
 
+        <!-- SUGESTÃO: Seção de FAQ adicionada -->
+        <section class="mb-16 md:mb-24">
+            <h2 class="text-3xl font-bold uppercase neon-text mb-12">Perguntas Frequentes</h2>
+            <div class="max-w-3xl mx-auto text-left space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-gray-900/50 rounded-lg neon-box overflow-hidden">
+                    <div class="faq-question flex justify-between items-center p-5 cursor-pointer">
+                        <h3 class="font-bold text-lg">Como recebo o acesso ao pack?</h3>
+                        <span class="text-pink-400 text-3xl font-light faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-300">Após a confirmação do pagamento, você receberá imediatamente um e-mail com o link de acesso exclusivo ao nosso grupo VIP no Telegram, onde todas as figurinhas estão organizadas.</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-gray-900/50 rounded-lg neon-box overflow-hidden">
+                    <div class="faq-question flex justify-between items-center p-5 cursor-pointer">
+                        <h3 class="font-bold text-lg">Preciso de algum programa ou app?</h3>
+                        <span class="text-pink-400 text-3xl font-light faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-300">Não! Você só precisa ter o aplicativo do Telegram instalado no seu celular. As figurinhas são salvas diretamente de lá para a sua galeria ou área de transferência para usar nos stories.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-gray-900/50 rounded-lg neon-box overflow-hidden">
+                    <div class="faq-question flex justify-between items-center p-5 cursor-pointer">
+                        <h3 class="font-bold text-lg">Vou receber atualizações? As atualizações são pagas?</h3>
+                        <span class="text-pink-400 text-3xl font-light faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-300">Sim! O pack recebe atualizações constantes com novas figurinhas e nichos. O seu acesso é vitalício, o que significa que você receberá todas as futuras atualizações gratuitamente, para sempre!</p>
+                    </div>
+                </div>
+                 <!-- FAQ 4 -->
+                <div class="faq-item bg-gray-900/50 rounded-lg neon-box overflow-hidden">
+                    <div class="faq-question flex justify-between items-center p-5 cursor-pointer">
+                        <h3 class="font-bold text-lg">O pagamento é seguro?</h3>
+                        <span class="text-pink-400 text-3xl font-light faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer px-5 pb-5">
+                        <p class="text-gray-300">Completamente seguro. Utilizamos a plataforma de pagamentos mais segura do mercado, com criptografia de ponta a ponta para proteger todos os seus dados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Final -->
         <footer class="mt-12 border-t-2 border-pink-500/30 pt-12">
             <p class="text-2xl md:text-3xl font-bold uppercase mb-6 neon-text">O pack mais completo do Brasil, por só R$9,99.</p>
@@ -552,13 +631,41 @@
             showNotification();
             setInterval(showNotification, 6000);
         }, 3000);
+        
+        // SUGESTÃO: Script para o contador de oferta
+        const countdown = () => {
+            const countDate = new Date();
+            countDate.setHours(23, 59, 59, 999); // Fim do dia
+            const now = new Date().getTime();
+            const gap = countDate - now;
+
+            const second = 1000;
+            const minute = second * 60;
+            const hour = minute * 60;
+
+            const textHour = Math.floor(gap / hour);
+            const textMinute = Math.floor((gap % hour) / minute);
+            const textSecond = Math.floor((gap % minute) / second);
+            
+            document.getElementById('hours').innerText = textHour < 10 ? '0' + textHour : textHour;
+            document.getElementById('minutes').innerText = textMinute < 10 ? '0' + textMinute : textMinute;
+            document.getElementById('seconds').innerText = textSecond < 10 ? '0' + textSecond : textSecond;
+        };
+        setInterval(countdown, 1000);
+
+        // SUGESTÃO: Script para o FAQ
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+
     </script>
     
     <script src="/_vercel/insights/script.js"></script>
 
 </body>
 </html>
-
-
 
 
