@@ -236,35 +236,6 @@
         .faq-item.active .faq-icon {
             transform: rotate(45deg);
         }
-
-        /* SUGESTÃO: Animação para a borda do bônus */
-        .animated-dashed-border {
-            position: relative;
-            border: 2px solid transparent; /* Mantém o espaçamento do layout original */
-            background-clip: padding-box; /* Impede que o fundo do elemento vaze para a área da borda */
-        }
-        .animated-dashed-border::before {
-            content: '';
-            position: absolute;
-            top: 0; right: 0; bottom: 0; left: 0;
-            z-index: -1;
-            margin: -2px; /* Compensa a largura da borda */
-            border-radius: inherit; /* Usa o mesmo arredondamento do elemento pai */
-            background: linear-gradient(90deg, #ec4899 50%, transparent 50%), 
-                        linear-gradient(90deg, #ec4899 50%, transparent 50%), 
-                        linear-gradient(0deg, #ec4899 50%, transparent 50%), 
-                        linear-gradient(0deg, #ec4899 50%, transparent 50%);
-            background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-            background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
-            background-position: 0 0, 100% 100%, 0 100%, 100% 0;
-            animation: marching-ants 1s linear infinite;
-        }
-
-        @keyframes marching-ants {
-            to {
-                background-position: 15px 0, -15px 100%, 0 -15px, 100% 15px;
-            }
-        }
     </style>
 </head>
 <body class="bg-gray-900">
@@ -293,10 +264,7 @@
                 <p class="text-lg md:text-xl text-gray-300 mb-6">A solução completa para stories incríveis e profissionais.</p>
 
                 <div class="bg-black/30 border-2 border-pink-500 inline-block p-4 rounded-lg shadow-[0_0_15px_rgba(236,72,153,0.8)] mb-4">
-                    <div class="text-3xl md:text-4xl font-bold flex items-baseline justify-center gap-3">
-                        <span class="text-gray-400 line-through text-2xl md:text-3xl">R$19,99</span>
-                        <span class="text-pink-400">por R$9,99</span>
-                    </div>
+                    <p class="text-3xl md:text-4xl font-bold text-pink-400">Apenas R$10,00</p>
                     <p class="flex items-center justify-center gap-2 mt-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 telegram-blue" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.57c-.28 1.13-1.04 1.4-1.74 .88l-4.98-3.9z"></path></svg>
                         <span class="telegram-blue font-semibold">acesso vitalício no Telegram</span>
@@ -314,16 +282,6 @@
                         <p class="text-sm font-semibold text-pink-400">A OFERTA TERMINA EM:</p>
                         <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
                         <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
-                    </div>
-                    <!-- BÓNUS DE AÇÃO RÁPIDA ADICIONADO -->
-                    <div class="animated-dashed-border mt-4 bg-pink-500/20 p-3 rounded-lg text-center inline-block">
-                        <p class="font-bold text-pink-300 uppercase flex items-center justify-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                               <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 3.732z" />
-                            </svg>
-                            COMPRE AGORA E RECEBA GRÁTIS:
-                        </p>
-                        <p class="mt-1 font-semibold text-white">Pack Bónus com +12.000 Artes Editáveis no Canva!</p>
                     </div>
                 </div>
             </div>
@@ -353,15 +311,6 @@
                     <p class="text-sm font-semibold text-pink-400">A OFERTA TERMINA EM:</p>
                     <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
                     <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
-                </div>
-                <div class="animated-dashed-border mt-4 bg-pink-500/20 p-3 rounded-lg text-center inline-block">
-                    <p class="font-bold text-pink-300 uppercase flex items-center justify-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                           <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 3.732z" />
-                        </svg>
-                        COMPRE AGORA E RECEBA GRÁTIS:
-                    </p>
-                    <p class="mt-1 font-semibold text-white">Pack Bónus com +12.000 Artes Editáveis no Canva!</p>
                 </div>
             </div>
         </section>
@@ -404,15 +353,6 @@
                     <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
                     <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
                 </div>
-                <div class="animated-dashed-border mt-4 bg-pink-500/20 p-3 rounded-lg text-center inline-block">
-                    <p class="font-bold text-pink-300 uppercase flex items-center justify-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                           <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 3.732z" />
-                        </svg>
-                        COMPRE AGORA E RECEBA GRÁTIS:
-                    </p>
-                    <p class="mt-1 font-semibold text-white">Pack Bónus com +12.000 Artes Editáveis no Canva!</p>
-                </div>
             </div>
         </section>
 
@@ -436,7 +376,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                     <span class="text-lg">Acesso <strong>vitalício</strong> por apenas R$9,99</span>
+                     <span class="text-lg">Acesso <strong>vitalício</strong> por apenas R$10,00</span>
                 </div>
                  <div class="flex items-center bg-gray-900/50 p-4 rounded-lg neon-box">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -449,13 +389,6 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span class="text-lg">+ 1.000 <strong>Clientes Satisfeitos</strong></span>
-                </div>
-                 <!-- BÓNUS ADICIONADO À LISTA -->
-                <div class="flex items-center bg-pink-500/30 p-4 rounded-lg border-2 border-pink-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-300 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                       <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 3.732z" />
-                    </svg>
-                    <span class="text-lg"><strong>BÓNUS HOJE:</strong> +12.000 Artes Editáveis no Canva</span>
                 </div>
             </div>
             <div class="mt-12 flex flex-col items-center">
@@ -470,15 +403,6 @@
                     <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
                     <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
                 </div>
-                <div class="animated-dashed-border mt-4 bg-pink-500/20 p-3 rounded-lg text-center inline-block">
-                    <p class="font-bold text-pink-300 uppercase flex items-center justify-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                           <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 3.732z" />
-                        </svg>
-                        COMPRE AGORA E RECEBA GRÁTIS:
-                    </p>
-                    <p class="mt-1 font-semibold text-white">Pack Bónus com +12.000 Artes Editáveis no Canva!</p>
-                </div>
             </div>
         </section>
 
@@ -489,7 +413,7 @@
                 <!-- Passo 1 -->
                 <div class="flex flex-col items-center max-w-xs">
                     <div class="w-20 h-20 bg-pink-500 rounded-full flex items-center justify-center text-4xl font-black mb-4 neon-button">1</div>
-                    <h3 class="text-xl font-bold mb-2">Pague apenas R$9,99</h3>
+                    <h3 class="text-xl font-bold mb-2">Pague apenas R$10,00</h3>
                     <p class="text-sm text-gray-400">Pagamento único, seguro e sem mensalidades.</p>
                 </div>
                 <!-- Seta -->
@@ -659,7 +583,7 @@
 
         <!-- CTA Final -->
         <footer class="mt-12 border-t-2 border-pink-500/30 pt-12">
-            <p class="text-2xl md:text-3xl font-bold uppercase mb-6 neon-text">O pack mais completo do Brasil, por só R$9,99.</p>
+            <p class="text-2xl md:text-3xl font-bold uppercase mb-6 neon-text">O pack mais completo do Brasil, por só R$10,00.</p>
             <div class="flex flex-col items-center">
                 <a href="https://www.ggcheckout.com/checkout/v2/Z3VzGlDvIPiJP30xwlyb" class="neon-button neon-button-green inline-flex items-center justify-center text-lg md:text-xl px-8 py-4 uppercase font-bold tracking-wider">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -672,15 +596,6 @@
                     <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
                     <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
                 </div>
-                <div class="animated-dashed-border mt-4 bg-pink-500/20 p-3 rounded-lg text-center inline-block">
-                    <p class="font-bold text-pink-300 uppercase flex items-center justify-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                           <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 3.732z" />
-                        </svg>
-                        COMPRE AGORA E RECEBA GRÁTIS:
-                    </p>
-                    <p class="mt-1 font-semibold text-white">Pack Bónus com +12.000 Artes Editáveis no Canva!</p>
-                </div>
             </div>
         </footer>
 
@@ -688,8 +603,8 @@
         
         <!-- Selos de Segurança -->
         <div class="mt-8 flex flex-wrap justify-center items-center gap-4">
-            <img src="https://www.siteconfiavel.com.br/assets/img/logo.svg" alt="Selo Site Confiável" class="h-10">
-            <img src="https://res.cloudinary.com/beleza-na-web/image/upload/f_auto,fl_progressive,q_auto:eco,w_iw/v1/banner/2025_05_06_10_15_51_5/5de7d0ba-aa98-48b8-84f1-388f0e901606-security-blz.png" alt="Selo de Segurança Beleza na Web" class="h-10">
+            <img src="https://www.siteconfiavel.com.br/assets/img/logo.svg" alt="Selo Site Confiável" class="h-12">
+            <img src="https://i.imgur.com/5ICgnoX.png" alt="Selo Compra Segura" class="h-12">
         </div>
 
         <!-- Copyright -->
@@ -776,4 +691,7 @@
 
 </body>
 </html>
+
+
+
 
