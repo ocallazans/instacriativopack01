@@ -236,6 +236,35 @@
         .faq-item.active .faq-icon {
             transform: rotate(45deg);
         }
+
+        /* SUGESTÃO: Animação para a borda do bônus */
+        .animated-dashed-border {
+            position: relative;
+            border: 2px solid transparent; /* Mantém o espaçamento do layout original */
+            background-clip: padding-box; /* Impede que o fundo do elemento vaze para a área da borda */
+        }
+        .animated-dashed-border::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -2px; /* Compensa a largura da borda */
+            border-radius: inherit; /* Usa o mesmo arredondamento do elemento pai */
+            background: linear-gradient(90deg, #ec4899 50%, transparent 50%), 
+                        linear-gradient(90deg, #ec4899 50%, transparent 50%), 
+                        linear-gradient(0deg, #ec4899 50%, transparent 50%), 
+                        linear-gradient(0deg, #ec4899 50%, transparent 50%);
+            background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+            background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+            background-position: 0 0, 100% 100%, 0 100%, 100% 0;
+            animation: marching-ants 1s linear infinite;
+        }
+
+        @keyframes marching-ants {
+            to {
+                background-position: 15px 0, -15px 100%, 0 -15px, 100% 15px;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-900">
@@ -286,6 +315,16 @@
                         <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
                         <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
                     </div>
+                    <!-- BÓNUS DE AÇÃO RÁPIDA ADICIONADO -->
+                    <div class="animated-dashed-border mt-4 bg-pink-500/20 p-3 rounded-lg text-center inline-block">
+                        <p class="font-bold text-pink-300 uppercase flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 3.732z" />
+                            </svg>
+                            COMPRE AGORA E RECEBA GRÁTIS:
+                        </p>
+                        <p class="mt-1 font-semibold text-white">Pack Bónus com +12.000 Artes Editáveis no Canva!</p>
+                    </div>
                 </div>
             </div>
         </header>
@@ -314,6 +353,15 @@
                     <p class="text-sm font-semibold text-pink-400">A OFERTA TERMINA EM:</p>
                     <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
                     <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
+                </div>
+                <div class="animated-dashed-border mt-4 bg-pink-500/20 p-3 rounded-lg text-center inline-block">
+                    <p class="font-bold text-pink-300 uppercase flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 3.732z" />
+                        </svg>
+                        COMPRE AGORA E RECEBA GRÁTIS:
+                    </p>
+                    <p class="mt-1 font-semibold text-white">Pack Bónus com +12.000 Artes Editáveis no Canva!</p>
                 </div>
             </div>
         </section>
@@ -355,6 +403,15 @@
                     <p class="text-sm font-semibold text-pink-400">A OFERTA TERMINA EM:</p>
                     <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
                     <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
+                </div>
+                <div class="animated-dashed-border mt-4 bg-pink-500/20 p-3 rounded-lg text-center inline-block">
+                    <p class="font-bold text-pink-300 uppercase flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 3.732z" />
+                        </svg>
+                        COMPRE AGORA E RECEBA GRÁTIS:
+                    </p>
+                    <p class="mt-1 font-semibold text-white">Pack Bónus com +12.000 Artes Editáveis no Canva!</p>
                 </div>
             </div>
         </section>
@@ -412,6 +469,15 @@
                     <p class="text-sm font-semibold text-pink-400">A OFERTA TERMINA EM:</p>
                     <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
                     <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
+                </div>
+                <div class="animated-dashed-border mt-4 bg-pink-500/20 p-3 rounded-lg text-center inline-block">
+                    <p class="font-bold text-pink-300 uppercase flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 3.732z" />
+                        </svg>
+                        COMPRE AGORA E RECEBA GRÁTIS:
+                    </p>
+                    <p class="mt-1 font-semibold text-white">Pack Bónus com +12.000 Artes Editáveis no Canva!</p>
                 </div>
             </div>
         </section>
@@ -605,6 +671,15 @@
                     <p class="text-sm font-semibold text-pink-400">A OFERTA TERMINA EM:</p>
                     <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
                     <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
+                </div>
+                <div class="animated-dashed-border mt-4 bg-pink-500/20 p-3 rounded-lg text-center inline-block">
+                    <p class="font-bold text-pink-300 uppercase flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 3.732z" />
+                        </svg>
+                        COMPRE AGORA E RECEBA GRÁTIS:
+                    </p>
+                    <p class="mt-1 font-semibold text-white">Pack Bónus com +12.000 Artes Editáveis no Canva!</p>
                 </div>
             </div>
         </footer>
