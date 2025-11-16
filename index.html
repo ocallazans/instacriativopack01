@@ -1,239 +1,55 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beatriz Lira - Digital (November Black)</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" href="https://i.imgur.com/RZR1gMI.png" type="image/png">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fonte "Great Vibes" para o título e "Poppins" para o corpo -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Great+Vibes&display=swap" rel="stylesheet">
-    
-    <style>
-        html, body {
-            font-family: 'Poppins', sans-serif;
-            background: #000; /* Fundo preto sólido */
-            color: white;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden; /* Previne scroll horizontal */
-        }
-        
-        /* Fonte do Título (Restaurada) */
-        .title-font {
-            font-family: 'Great Vibes', cursive;
-        }
-
-        /* Tema Dourado com Brilho (Restaurado) */
-        .gold-text {
-            color: #FBBF24; /* Dourado */
-            text-shadow:
-                0 0 5px rgba(251, 191, 36, 0.6),
-                0 0 10px rgba(251, 191, 36, 0.6),
-                0 0 20px rgba(251, 191, 36, 0.5),
-                0 0 40px rgba(251, 191, 36, 0.4);
-        }
-        
-        .title-font.gold-text {
-            text-shadow:
-                0 0 2px rgba(255, 255, 255, 0.7),
-                0 0 5px rgba(251, 191, 36, 0.8),
-                0 0 10px rgba(251, 191, 36, 0.8),
-                0 0 20px rgba(251, 191, 36, 0.8),
-                0 0 40px rgba(251, 191, 36, 0.6),
-                0 0 80px rgba(251, 191, 36, 0.6);
-        }
-
-        .gold-button {
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-            animation: pulse-gold 2s infinite; /* Animação restaurada */
-            background-color: #FBBF24;
-            color: #111; /* Texto escuro para contraste */
-            font-weight: 700;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 5px #FBBF24, 0 0 15px #FBBF24, 0 0 30px #FBBF24; /* Sombra restaurada */
-        }
-
-        .gold-button:hover {
-            animation-play-state: paused;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 10px #FBBF24, 0 0 30px #FBBF24, 0 0 60px #FBBF24;
-            transform: translateY(-2px) scale(1.05);
-        }
-        
-        @keyframes pulse-gold {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        
-        .gold-box {
-            border: 2px solid #FBBF24;
-            box-shadow: 0 0 10px rgba(251, 191, 36, 0.5); /* Sombra restaurada */
-        }
-
-        /* Mockup Celular (Restaurado) */
-        .mockup-container {
-            position: relative;
-            flex-shrink: 0;
-        }
-        .phone-mockup {
-            position: absolute;
-            width: 100px; height: 200px;
-            background: #111;
-            border-radius: 18px; border: 5px solid #f0f0f0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            display: flex; justify-content: center; align-items: center;
-            overflow: hidden;
-        }
-        .phone-mockup::before {
-            content: ''; position: absolute; top: 6px;
-            width: 40%; height: 8px;
-            background: #111; border-radius: 6px; z-index: 2;
-        }
-        .phone-screen { width: 100%; height: 100%; overflow: hidden; }
-        .phone-screen img { width: 100%; height: 100%; object-fit: cover; }
-        .phone-1 { top: 0; left: 50%; transform: translateX(-70%) rotate(-10deg); z-index: 1; }
-        .phone-2 { bottom: 0; left: 50%; transform: translateX(-30%) rotate(10deg); z-index: 2; }
-
-
-        .telegram-blue { color: #2AABEE; }
-
-    </style>
-</head>
-<body class="bg-black">
-
-<div class="container mx-auto px-6 py-12 max-w-5xl text-center">
-
-    <!-- Topo -->
-    <header class="mb-16 md:mb-24 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-        
-        <!-- Mockup Celulares (Restaurado) -->
-        <div class="mockup-container w-[200px] h-[240px]">
-            <div class="phone-mockup phone-1"><div class="phone-screen"><img src="https://i.imgur.com/Y25yKzQ.png" alt="Exemplo de figurinha no celular"></div></div>
-            <div class="phone-mockup phone-2"><div class="phone-screen"><img src="https://i.imgur.com/Ext3yXR.png" alt="Exemplo de figurinha no celular"></div></div>
-        </div>
-
-        <!-- Conteúdo do Topo -->
-        <div class="text-center md:text-left">
-            
-            <!-- Título (Fonte Restaurada) -->
-            <h1 class="title-font text-5xl lg:text-6xl gold-text mb-4">Beatriz Lira - Digital</h1>
-            <p class="title-font text-3xl lg:text-4xl text-gray-200 mb-6">Oferta Especial November Black!</p>
-            
-            <!-- Preço -->
-            <div class="bg-gray-900/30 border-2 border-amber-400 inline-block p-4 rounded-lg mb-4">
-                <!-- BADGE DE DESCONTO -->
-                <div class="inline-block bg-red-600 text-white text-sm font-bold px-3 py-1 rounded-full uppercase mb-2 shadow-lg">
-                    70% OFF
-                </div>
-                <div class="text-3xl md:text-4xl font-bold flex items-baseline justify-center gap-3">
-                    <span class="text-gray-400 line-through text-2xl md:text-3xl">R$19,99</span>
-                    <span class="text-amber-400">por R$5,99</span>
-                </div>
-                <p class="flex items-center justify-center gap-2 mt-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 telegram-blue" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.57c-.28 1.13-1.04 1.4-1.74 .88l-4.98-3.9z"></path></svg>
-                    <span class="telegram-blue font-semibold">acesso vitalício no Telegram</span>
-                </p>
-            </div>
-            <!-- Botão (Sem Contador) -->
-            <div class="mt-8 flex flex-col items-center md:items-start">
-                <a href="https://www.ggcheckout.com/checkout/v2/Z3VzGlDvIPiJP30xwlyb" class="gold-button inline-flex items-center justify-center text-lg md:text-xl px-8 py-4 uppercase font-bold tracking-wider">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    Quero meu pack agora
-                </a>
-                <!-- CONTADOR REMOVIDO -->
-            </div>
-        </div>
-    </header>
-
-    <!-- Benefícios Rápidos -->
-    <section class="mb-16 md:mb-24">
-        <h2 class="text-3xl font-bold uppercase gold-text mb-10">Tudo que você precisa para stories incríveis</h2>
-        <div class="max-w-md mx-auto text-left space-y-4">
-            <div class="flex items-center bg-gray-900/50 p-4 rounded-lg gold-box"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span class="text-lg">+10.000 <strong>Figurinhas Prontas</strong></span></div>
-            <div class="flex items-center bg-gray-900/50 p-4 rounded-lg gold-box"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span class="text-lg">+50 <strong>Nichos Diferentes</strong></span></div>
-            <div class="flex items-center bg-gray-900/50 p-4 rounded-lg gold-box"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span class="text-lg">Acesso <strong>vitalício</strong> por apenas R$5,99</span></div>
-        </div>
-    </section>
-
-    <!-- BÓNUS (Ícones simples) -->
-    <section class="mb-16 md:mb-24">
-        <h2 class="text-3xl font-bold uppercase gold-text mb-10">BÓNUS PARA OS 10 PRIMEIROS</h2>
-        <p class="text-gray-300 max-w-lg mx-auto mb-8">Compre agora e, se for um dos 10 primeiros do dia, leve também estes packs incríveis:</p>
-        <div class="max-w-md mx-auto text-left space-y-4">
-            
-            <!-- Bónus 1 -->
-            <div class="flex items-start bg-gray-900/50 p-4 rounded-lg gold-box">
-                <span class="text-3xl mr-4 pt-1">🎨</span>
-                <div class="flex flex-col">
-                    <span class="text-lg"><strong>+12.000 Posts Prontos</strong> (100% Editáveis no Canva)</span>
-                    <span class="text-lg font-bold mt-1">
-                        <span class="text-gray-400 line-through">R$29,99</span>
-                        <span class="text-amber-400 ml-2">por R$0,00</span>
-                    </span>
-                </div>
-            </div>
-            
-            <!-- Bónus 2 -->
-            <div class="flex items-start bg-gray-900/50 p-4 rounded-lg gold-box">
-                <span class="text-3xl mr-4 pt-1">🍹</span>
-                <div class="flex flex-col">
-                    <span class="text-lg"><strong>Ebook 100 Sucos Detox</strong> (Receitas práticas)</span>
-                    <span class="text-lg font-bold mt-1">
-                        <span class="text-gray-400 line-through">R$19,99</span>
-                        <span class="text-amber-400 ml-2">por R$0,00</span>
-                    </span>
-                </div>
-            </div>
-            
-            <!-- Bónus 3 -->
-            <div class="flex items-start bg-gray-900/50 p-4 rounded-lg gold-box">
-                 <span class="text-3xl mr-4 pt-1">💌</span>
-                <div class="flex flex-col">
-                    <span class="text-lg"><strong>Super Pack Convites Lucrativos</strong> (Modelos editáveis)</span>
-                    <span class="text-lg font-bold mt-1">
-                        <span class="text-gray-400 line-through">R$9,99</span>
-                        <span class="text-amber-400 ml-2">por R$0,00</span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- CTA Final -->
-    <footer class="mt-12 border-t-2 border-amber-500/30 pt-12">
-        <p class="text-2xl md:text-3xl font-bold uppercase gold-text mb-6">Garanta agora seu pack com preço de November Black!</p>
-        <div class="flex flex-col items-center">
-            <a href="https://www.ggcheckout.com/checkout/v2/Z3VzGlDvIPiJP30xwlyb" class="gold-button inline-flex items-center justify-center text-lg md:text-xl px-8 py-4 uppercase font-bold tracking-wider">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                Quero meu pack agora
-            </a>
-             <!-- CONTADOR REMOVIDO -->
-        </div>
-    </footer>
-
-    <!-- Rodapé com Selos e Copyright -->
-    <div class="mt-16 text-center">
-        <div class="flex flex-wrap justify-center items-center gap-4">
-            <img src="https://www.siteconfiavel.com.br/assets/img/logo.svg" alt="Selo Site Confiável" class="h-12">
-            <img src="https://i.imgur.com/5ICgnoX.png" alt="Selo Compra Segura" class="h-12">
-        </div>
-        <p class="mt-8 text-gray-400 text-sm">© 2025 Beatriz Lira - Digital. Todos os direitos reservados.</p>
-    </div>
-</div>
-
-<!-- NOTIFICAÇÃO REMOVIDA -->
-
-<!-- SCRIPTS REMOVIDOS -->
-<script src="/_vercel/insights/script.js"></script>
-
-</body>
-</html>
-
-
+Crie uma landing page "One Page" com o tema Black Friday, otimizada para conversão e totalmente responsiva (desktop e mobile).
+1. Configuração Geral e Estilo:
+ * Tema: Black Friday. O fundo principal deve ser preto (#000).
+ * Paleta de Cores: A cor de destaque principal deve ser um dourado/âmbar vibrante (ex: #FBBF24). Use verde para o preço (R$5,99) e azul (#2AABEE) apenas para o ícone e texto do Telegram.
+ * Layout: O conteúdo principal deve ser centrado e ter uma largura máxima (ex: max-w-5xl).
+ * Fontes:
+   * Texto geral: 'Poppins' (importar do Google Fonts).
+   * Títulos principais: 'Great Vibes' (importar do Google Fonts).
+ * Efeitos Visuais:
+   * Títulos e textos dourados devem ter um efeito de "glow" (brilho/text-shadow).
+   * Correção de Bug Crítica: Adicione overflow-x: hidden; às tags <html> e <body> para prevenir qualquer "quebra" de layout ou barra de scroll horizontal.
+ * Favicon: Use este link: https://i.imgur.com/RZR1gMI.png.
+2. Seção Topo (Header):
+ * Layout: Em desktop, os elementos devem ficar lado a lado. Em mobile, devem ficar empilhados (Mockup primeiro, depois o conteúdo).
+ * Mockup (Esquerda): Crie um mockup de dois celulares inclinados (estilo "phone-1" e "phone-2" que usamos).
+   * Imagem do celular traseiro: https://i.imgur.com/Y25yKzQ.png
+   * Imagem do celular frontal: https://i.imgur.com/Ext3yXR.png
+ * Conteúdo (Direita):
+   * Título (Fonte 'Great Vibes', Dourado): "Beatriz Lira - Digital"
+   * Subtítulo (Fonte 'Great Vibes', cinza claro): "Oferta Especial Black Friday!"
+   * Caixa de Preço (borda dourada):
+     * Preço antigo, riscado: "R$19,99"
+     * Preço novo, destacado: "por R$5,99" (cor verde)
+     * Texto do Telegram: "acesso vitalício no Telegram" (com ícone e texto em azul #2AABEE).
+   * Botão de Compra (Dourado, Pulsante):
+     * Texto: "Quero meu pack agora" (com ícone de carrinho).
+     * Animação: Deve ter uma animação de pulsação sutil (pulse-gold).
+     * Link: https://www.ggcheckout.com/checkout/v2/Z3VzGlDvIPiJP30xwlyb
+   * Contador Regressivo (Abaixo do botão):
+     * Texto: "A OFERTA TERMINA EM:" (dourado).
+     * Formato: Deve mostrar "Dias", "Horas", "Min" e "Seg".
+     * Script: O contador deve fazer a contagem regressiva para a meia-noite de 30 de Novembro de 2025.
+3. Seção de Benefícios:
+ * Título (Dourado, 'Poppins' maiúsculo): "Tudo que você precisa para stories incríveis"
+ * Lista: Crie uma lista vertical (centralizada, max-w-md) com 3 itens.
+ * Estilo do Item: Cada item deve ter um fundo escuro, borda dourada (gold-box), e um ícone de check verde (✓).
+ * Textos dos Itens:
+   * "+10.000 <strong>Figurinhas Prontas</strong>"
+   * "+50 <strong>Nichos Diferentes</strong>"
+   * "Acesso <strong>vitalício</strong> por apenas R$5,99"
+4. Seção CTA Final (Footer):
+ * Título (Dourado, 'Poppins' maiúsculo): "Garanta agora seu pack de figurinhas com preço de Black Friday!"
+ * Conteúdo: Centralize e replique o exato mesmo Botão de Compra e o exato mesmo Contador Regressivo da seção Topo. O script do contador deve atualizar ambos os cronómetros.
+5. Rodapé Final (Selos e Copyright):
+ * Selos de Segurança: Centralize dois selos de segurança, lado a lado (empilhados no mobile).
+   * Selo 1: https://www.siteconfiavel.com.br/assets/img/logo.svg (altura h-12)
+   * Selo 2: https://i.imgur.com/5ICgnoX.png (altura h-12)
+ * Copyright: Abaixo dos selos, adicione o texto: "© 2025 Beatriz Lira - Digital. Todos os direitos reservados." (cor cinza claro).
+6. Scripts e Funcionalidades Adicionais:
+ * Notificação de Compra (Popup):
+   * Posição: Canto superior direito (top-right).
+   * Animação: Deve aparecer e desaparecer suavemente usando opacity e visibility (NÃO use transform: translateX para evitar o bug de layout).
+   * Texto: "<strong>[Nome]</strong> acabou de entrar no grupo!"
+   * Script: Deve usar uma lista de nomes femininos (ex: Helena, Alice, Cecília...) e exibir uma notificação aleatória a cada 6-7 segundos.
+ * Analytics: Adicione o script do Vercel Analytics antes de fechar a tag </body>: <script defer src="/_vercel/insights/script.js"></script>.
